@@ -1,0 +1,15 @@
+/*Orphan Process
+#include<stdio.h>
+#include<unistd.h>
+
+int main() {
+  int pid = fork();
+  if(pid > 0) {
+    printf("\nParent Process %d Child process %d\n",getpid(),pid);
+  }
+  else {
+    sleep(30);
+    printf("\nChild Process %d \n",getpid());
+  }
+return 0;
+}*/

@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<unistd.h>
+#include<sys/wait.h>
+int main()
+{
+    pid_t pid=fork();
+    if(pid==0)
+    {
+        printf("HC:Hello from Child\n");
+    }
+    else
+    {
+        printf("HP:Hello from Parent\n");
+        wait(NULL);
+        printf("CT:Child has Terminated\n");
+    }
+    printf("Bye\n");
+    return 0;
+    
+}
